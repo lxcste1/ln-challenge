@@ -44,12 +44,12 @@ interface CardProps {
                     }
                 </div>
                 <div className='md:p-0 md:pb-8 p-3'>
-                    <h1 className={`${info.type == 'secondary' && `md:font-['suecaslab-medium'] font-['suecaslab-bold'] md:text-[18px] leading-6 md:mt-3 pb-2`} font-['suecaslab-bold'] text-[20px] leading-7 md:pb-3 ${info.type == 'main' && 'md:text-[32px]'}`}>
+                    <h1 title={info.title} className={`${info.type == 'secondary' && `md:font-['suecaslab-medium'] font-['suecaslab-bold'] md:text-[18px] leading-6 md:mt-3 pb-2`} font-['suecaslab-bold'] text-[20px] leading-7 md:pb-3 ${info.type == 'main' && 'md:text-[32px]'}`}>
                         <span className='text-[#0250c9]'>{info.lead}. </span>
                         {info.title}
                     </h1>
-                    {info.subtitle != '' ? <p className={`font-['Arial'] text-[16px] leading-6 py-3`}>{info.subtitle}</p> : ''}
-                    <b className={`font-['Arial'] text-[14px] leading-4`}>{info.author}</b>
+                    {info.subtitle != '' ? <p title={info.subtitle} className={`font-['Arial'] text-[16px] leading-6 py-3`}>{info.subtitle}</p> : ''}
+                    <b title={info.author} className={`font-['Arial'] text-[14px] leading-4`}>{info.author}</b>
                 </div>
             </div>
         </Link>
