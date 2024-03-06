@@ -1,3 +1,9 @@
+/**
+ * Masterpage - Contenedor principal.
+ * @author Lucas Tello
+ * @created 06/03/2024
+ */
+
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Articles from '@/components/Articles';
 
