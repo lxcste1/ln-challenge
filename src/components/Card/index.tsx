@@ -1,3 +1,9 @@
+/**
+ * Componente - Componente de Cards.
+ * @author Lucas Tello
+ * @created 06/03/2024
+ */
+
 import { Article } from '@/types'
 import React from 'react'
 
@@ -12,6 +18,7 @@ interface CardProps {
 
   const Card: React.FC<CardProps> = ({ info }) => {
 
+    // Variable para detectar el tipo de dispositivo
     const size = GetSize();
 
     return (

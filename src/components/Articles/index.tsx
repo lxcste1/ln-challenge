@@ -1,3 +1,9 @@
+/**
+ * Componente - Contenedor de artículos.
+ * @author Lucas Tello
+ * @created 06/03/2024
+ */
+
 import React from 'react'
 
 import { useQuery } from 'react-query'
@@ -7,11 +13,17 @@ import Card from '../Card'
 
 export default function Articles() {
 
+    // Obtención de los artículos
     const { data } = useQuery(
         ['articles'],
         async () => await FetchArticles()
     )
 
+    /**
+     * Filtro para el tipo de artículo
+     * @mainArticle - artículo principal
+     * @secondaryArticle - artículos secundarios
+     */
     const mainArticle = data?.filter((article) => {
         return article.type == 'main'
     })
